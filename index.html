@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tích hợp Lets Encrypt vào Traefik V2.5+</title>
+
+  <style>
+    p {
+      font-size: 20px;
+      color: forestgreen;
+    }
+
+    code {
+      font-family: Consolas, "courier new";
+      color: crimson;
+      background-color: #f1f1f1;
+      padding: 2px;
+      font-size: 105%;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    img {
+      vertical-align: middle;
+      border-style: none;
+    }
+
+    post-content img {
+      height: auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="" alt="">
+  <h1>Tích hợp Lets Encrypt vào Traefik V2.5+</h1>
+  <blockquote>
+    19 tháng 09, 2021 - 178 lượt xem
+  </blockquote>
+  <blockquote>
+    Traefik là một reverse proxy rất đa năng.
+    <br>
+    Nó có thể cài đặt trong môi trường Docker, Docker Swarm, Kubernetes để làm API Gateway.
+    <br>
+    Điểm mạnh là nó có khả năng liên tục cập nhật cấu hình danh mục các service chạy hoặc tắt trong Docker Swarm,
+    Kubernetes để định tuyến lại, cung cấp giao diện quản lý (dashboard) rất đẹp.
+    <br>
+    Lập trình có thể viết bổ xung middleware, plugins bằng Golang.
+  </blockquote>
+  <img style="margin: auto;" 
+  src="image/traefikdocker.png" alt="Ảnh Mô Tả Docker">
+  <p>Trong bài viết này tôi chia sẻ lại kinh nghiệm cấu hình LetsEncrypt TLS với Traefik. Các bước như sau:
+  </p>
+  <p>Tạo một overlay network để traefik và các dịch vụ cùng tham gia vào
+  </p>
+  <p>Định nghĩa 3 entry points: 80 (http), 443 (https), 8080 (dashboard, api)
+  </p>
+  <code>```yaml <br>
+     - "--entryPoints.web.address=:80" <br>
+     - "--entryPoints.api.address=:8080" <br>
+     - "--entrypoints.websecure.address=:443" <br>
+```
+</code>
+  <p>1. Cấu hình docker provider chế độ Swarm, cập nhật lại danh sách các service cứ 30 giây một lần, mặc định là không
+    hiện service vào Traefik trừ khi có chủ ý
+  </p>
+  <code>```yaml <br>
+ - '--providers.docker.watch=true' <br>
+ - '--providers.docker.swarmMode=true' <br>
+ - '--providers.docker.swarmModeRefreshSeconds=30s' <br>
+ - '--providers.docker.exposedbydefault=false' <br>
+```
+</code>
+  <p>Cấu hình LetsEncrypt. Thay email bằng email riêng của bạn. <strong>caserver</strong> phải trỏ đến
+    <i><b>caserver=https://acme-v02.api.letsencrypt.org/directory</b></i>
+  </p>
+  <code>```yaml <br>
+ - "--certificatesresolvers.myresolver.acme.tlschallenge=true" <br>
+ - "--certificatesresolvers.myresolver.acme.caserver=https://acme-v02.api.letsencrypt.org/directory" <br>
+ - "--certificatesresolvers.myresolver.acme.email=you@yourcompany.com" <br>
+ - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json" <br>
+```
+</code>
+  <p>1. Mở cổng từ máy ảo vào Docker container</p>
+  <code>```yaml <br>
+ ports: <br>
+     - "80:80" <br>
+     - "443:443" <br>
+```
+</code>
+  <p>1. Đồng bộ thư mục từ máy ảo vào Docker container traefik. Đồng bộ <<b><i>/var/run/docker.sock</i></b> thực chất để
+      traefik có <br> thể gọi trực tiếp Docker daemon lấy thông tin các service trong Docker Swarm</p>
+  <code>```yaml <br>
+volumes: <br>
+ - "/home/dev/letsencrypt:/letsencrypt" <br>
+ - "/var/run/docker.sock:/var/run/docker.sock:ro" <br>
+```
+</code>
+  <p>1. Nếu bạn triển khai Docker Swarm bạn cần sử dụng <b><i>deploy.labels</i></b> gán nhãn cho Docker service để
+    Traefik có thể nhận ra và định tuyến request</p>
+  <code>```yaml <br>
+deploy: <br>
+labels: <br>
+ - "traefik.enable=true"  # Tham gia vào danh sách dịch vụ Traefik quản lý <br>
+ - "traefik.docker.network=an_overlay_network" # Tham gia mạng overlay <br>
+ - "traefik.http.routers.dashboard.rule=Host(`dashboard.yourcompany.com`)" # Biểu thức điều hướng request chứa dashboard.yourcompany.com vào dịch vụ này <br>
+ - "traefik.http.routers.dashboard.entrypoints=websecure" # Ngõ vào phải là https <br>
+ - "traefik.http.routers.dashboard.tls=true" # Bật TLS để mã hoá đường truyền <br>
+ - "traefik.http.routers.dashboard.tls.certresolver=myresolver" # Dùng myresolver để chọn LetsEncrypt public/private key <br>
+ - "traefik.http.routers.dashboard.service=api@internal" # Đây là dịch vụ dashboard của Traefik <br>
+ - "traefik.http.routers.dashboard.middlewares=auth" # Sử dụng middleware Basic Auth để yêu cầu người dùng đăng nhập <br>
+ - "traefik.http.middlewares.auth.basicauth.users=you@yourcompany.com:xxxxxx" # userid và pass để đăng nhập kiểu Basic Auth <br>
+ - "traefik.http.services.gateway.loadbalancer.server.port=8080" # Dịch vụ phục vụ ở cổng 8080 <br>
+```
+</code>
+  <p>Chú ý cấu hình <b><i>traefik.http.middlewares.auth.basicauth.users</i></b> bạn có thể vào <br> <a
+      href="https://hostingcanada.org/htpasswd-generator">https://hostingcanada.org/htpasswd-generator/</a>
+    để sinh chuỗi user/pass dùng thuật toán Bcrypt. Cần phải nhân đôi ký tự <b><i>$</i></b> <br> trong chuỗi password
+    băm để escape character. Nếu quên là bạn không thể đăng nhập được. <br>
+
+    Triển khai stack bằng lệnh <b><i>docker stack deploy -c docker_compose.traefik.yml traefik</i></b> <br>
+
+    Thử truy cập vào <b><i> https://dashboard.yourcompany.com</i></b>. Chú ý rằng <b><i>yourcompany.com</i></b> phải là
+    tên miền bạn sở hữu và đang trỏ tới máy ảo triển khai Traefik.</p>
+</body>
+<p><b>Đây là file docker-compose cuối cùng
+  </b></p>
+<code>version: '3.8' <br>
+networks: <br>
+  an_overlay_network: <br>
+    external: true <br>
+
+services: <br>
+  gateway: <br>
+    image: traefik:v2.5 <br>
+    networks: <br>
+      - an_overlay_network <br>
+    command: <br>
+      - '--api.dashboard=true' <br>
+      - '--api.insecure=false' <br>
+      - '--providers.docker=true' <br>
+      - '--entryPoints.web.address=:80' <br>
+      - '--entryPoints.api.address=:8080' <br>
+      - "--entrypoints.websecure.address=:443" <br>
+      - '--providers.docker.watch=true' <br>
+      - '--providers.docker.swarmMode=true' <br>
+      - '--providers.docker.swarmModeRefreshSeconds=30s' <br>
+      - '--providers.docker.exposedbydefault=false' <br>
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure" <br>
+      - "--entrypoints.api.http.redirections.entryPoint.to=websecure" <br>
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true" <br>
+      - "--certificatesresolvers.myresolver.acme.caserver=https://acme-v02.api.letsencrypt.org/directory" <br>
+      - "--certificatesresolvers.myresolver.acme.email=you@yourcompany.com" <br>
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json" <br>
+    ports: <br>
+      - "80:80" <br>
+      - "443:443" <br>
+    volumes: <br>
+      - "/home/dev/letsencrypt:/letsencrypt" <br>
+      - "/var/run/docker.sock:/var/run/docker.sock:ro" <br>
+    deploy: <br>
+      labels: <br>
+          - "traefik.enable=true" <br>
+          - "traefik.docker.network=an_overlay_network" <br>
+          - "traefik.http.routers.dashboard.rule=Host(`dashboard.yourcompany.com`)" <br>
+          - "traefik.http.routers.dashboard.entrypoints=websecure" <br>
+          - "traefik.http.routers.dashboard.tls=true" <br>
+          - "traefik.http.routers.dashboard.tls.certresolver=myresolver" <br>
+          - "traefik.http.routers.dashboard.service=api@internal" <br>
+          - "traefik.http.routers.dashboard.middlewares=auth" <br>
+          - "traefik.http.middlewares.auth.basicauth.users=you@yourcompany.com:xxxxxx" <br>
+          - "traefik.http.services.gateway.loadbalancer.server.port=8080" <br>
+</code>
+
+<blockquote>
+  Tham khảo Lộ trình <a href="https://devops.techmaster.vn/">DevOps</a>
+  - đào tạo trực tuyến có tương tác, học viên ở mọi nơi đều có thể học.
+</blockquote>
+
+</html>
