@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.cards {
+  display: flex;
+  margin-left: -25px;
+  justify-content: space-between;
+}
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 33.33% -25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+img{
+  height: 100%;
+  transition: 0.3s
+}
+/* .layout-item:nth-child(2){
+  grid-row: 2/4;
+} */
+/* .layout-item{
+  overflow: hidden;
+} */
+/* img {
+  opacity: 1;
+} */
+.card .img5:hover {
+  transform: scale(1.5);
+}
+
+.card .img1:hover {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.card .img2:hover {
+  -webkit-transform: translate(0, 15%);
+  transform: translate(0, 15%);
+}
+.card .img3:hover{
+  transform: scale(1.2);
+}
+.card .img4{
+    opacity: 0.5;
+}
+.card .img4:hover{
+    opacity: 1;
+}
+.card .img6:hover{
+    transform: skew(-10deg);
+}
+/* .line3 .img7:hover{
+    transform: rotateX(40deg);
+}
+.line3 .img8:hover{
+    transform: scaleX(1.2);
+}
+.line3 .img9:hover{
+    transform: scaleY(1.5);
+} */
