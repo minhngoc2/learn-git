@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    height: 500px;
+}
+.container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    animation: enLarge 1.5s  infinite;
+    /* animation-direction: alternate-reverse; */
+}
+@-webkit-keyframes enLarge{
+    0%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(1.2);
+    }
+}
