@@ -37,6 +37,7 @@ i {
   grid-gap: 20px;
   padding-left: 12px;
   position: relative;
+  width: fit-content;
 }
 .mini-menu {
   padding: 0px 20px 0px 0px;
@@ -64,7 +65,7 @@ a {
 }
 .container {
   background-color: #fef1e6;
-  width: fit-content;
+  width: 182px;
 }
 #main-menu:hover {
   background-color: #C996CC;
