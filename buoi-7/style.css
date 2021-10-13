@@ -1,61 +1,82 @@
-#main-menu > li > ul{
-    list-style-type: none;
-    display: none;
+#main-menu > li > ul {
+  list-style-type: none;
+  display: none;
 }
-#main-menu > li:hover > ul{
-    display: block;
-    position: absolute;
-    left: 200px;
-    width: 150px;
-    top: 0px;
-    background-color: #F3D5C0;
+#main-menu > li:hover > ul {
+  display: block;
+  position: absolute;
+  left: 182px;
+  width: 150px;
+  /* top: 0px; */
+  background-color: #f3d5c0;
 }
-#main-menu > li:hover{
-    background-color: #39A388;
+#main-menu > li:hover {
+  background-color: #39a388;
 }
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
-.sub-menu{
-    position: relative;
-    width: 200px;
-
+.sub-menu {
+  width: 170px;
 }
-.sub-menu > ul{
-    position: absolute;
-    left: 10%;
-    box-shadow: 0 0 10px rgba(0,0,0,.15);
+.sub-menu > ul {
+  /* position: absolute; */
+  /* left: 10%; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
-i{
-    opacity: 0;
-    position: absolute;
-    right: 0px;
+i {
+  opacity: 0;
+  position: absolute;
+  right: 0px;
 }
-.sub-menu:hover i{
-    opacity: 1;
+.sub-menu:hover i {
+  opacity: 1;
 }
-#main-menu{
-    display: grid;
-    grid-gap: 20px;
+#main-menu {
+  display: grid;
+  grid-gap: 20px;
+  padding-left: 12px;
+  position: relative;
 }
-.mini-menu{
-    padding: 0px 20px 0px 0px;
+.mini-menu {
+  padding: 0px 20px 0px 0px;
+  height: 170px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.mini-menu > li{
-    padding-bottom: 20px;
+.mini-menu > li {
+  padding-bottom: 20px;
 }
-.mini-menu  li:last-child{
-    padding-bottom: 0px;
+.mini-menu li:last-child {
+  padding-bottom: 0px;
 }
-a{
-    display: block;
-    text-align: center;
+a {
+  display: block;
+  padding-left: 8px;
+  height: 27px;
+  line-height: 27px;
+  text-decoration: none;
 }
-.container{
-    background-color: #FEF1E6;
-    width: fit-content;
+.container {
+  background-color: #fef1e6;
+  width: fit-content;
+}
+#main-menu:hover {
+  background-color: #C996CC;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 120px 30px;
+  border-bottom-left-radius: 120px 30px;
+  border-bottom-right-radius: 15px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+a:hover{
+    text-decoration: underline;
+    color: #39A388;
+    transition: all 0.4s ease;
 }
