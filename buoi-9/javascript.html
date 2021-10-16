@@ -1,0 +1,85 @@
+<script>
+  // Bài 1:
+  /*
+  Viết 1 function tính bình phương của 1 số.
+
+  Tham số truyền vào là 1 số.
+  Kết quả là bình phương của số đó.
+  */
+  function square(n) {
+    return n * n;
+  }
+  // Bài 2:
+  /*
+  Viết function tính thế kỷ của 1 năm. Biết thế kỷ thứ nhất tính từ năm 1 đến 100.
+
+  Tham số truyền vào là 1 số nguyên dương.
+  Kết quả là thế kỷ của năm. Ví dụ 2019 => Kết quả là 21.
+  Gợi ý: Sử dụng các phương thức của object Math để làm tròn, bao gồm: Math.floor, Math.ceil và Math.round.
+  */
+  function century(n) {
+    var theKi = n / 100;
+    theKi = Math.ceil(theKi);
+    return theKi;
+  }
+  // Bài 3:
+  /*
+  Cho 1 chuỗi dài hơn 15 ký tự. Viết 1 function cắt chuỗi, lấy ra 10 ký tự đầu tiên và thêm vào dấu "..." ở cuối chuỗi.
+
+  Tham số truyền vào là 1 chuỗi dài hơn 15 ký tự.
+  Kết quả là chuỗi đó sau khi cắt đi còn 10 ký tự, cuối chuỗi có dấu "..." biểu thị là chuỗi bị cắt.
+  */
+  function cutString(xau) {
+    subString = xau.substring(0, 11);
+    subString += "...";
+    return subString;
+  }
+  // Bài 4:
+  /*
+  Viết 1 function có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên.
+  Tham số truyền vào là 1 chuỗi.
+  Kết quả là 1 chuỗi mới chỉ viết hoa từ đầu tiên. Ví dụ "techMaster" sẽ được convert thành "Techmaster".
+  Gợi ý: Để chuyển 1 chuỗi sang viết hoa thì dùng phương thức toUpperCase, để chuyển 1
+  chuỗi sang viết thường thì dùng phương thức toLowerCase.*/
+  function capitalize(xau) {
+    var result = xau.slice(0, 1).toUpperCase() + xau.slice(1).toLowerCase();
+    return result;
+  }
+  // Bài 5.
+  /*Viết 1 function lấy ra 1 số nhỏ nhất trong 1 mảng các số.
+
+  Tham số truyền vào là 1 mảng các số.
+  Kết quả là số nhỏ nhất trong mảng.
+  Gợi ý: có thể dùng phương thức sort() hoặc object Math, chú ý khi sort số khác với chữ.
+  */
+  function minNumber() {
+    var arr = [];
+    var i = 0;
+    for (var param of arguments) {
+      arr[i++] = param;
+    }
+    arr.sort();
+    return arr[0];
+  }
+
+  // Bài 6. Cho 1 mảng gồm tên của 5 học viên. Hãy viết function sắp xếp lại thứ tự các học
+  //viên theo bảng chữ cái và in ra màn hình danh sách học viên.
+
+  // Tham số truyền vào là 1 mảng gồm tên của 5 người.
+  // Kết quả: In ra màn hình danh sách các học viên theo thứ tự bảng chữ cái (tiếng Anh),
+  //mỗi người trên 1 dòng.
+  // Gợi ý: dùng phương thức join() để biến 1 mảng thành 1 chuỗi và chèn thêm ký tự <br>
+  //để hiển thị xuống dòng trong HTML..
+
+  function rearrangeStudent() {
+    var arr = [];
+    var i = 0;
+    for (var param of arguments) {
+      arr[i++] = param;
+    }
+    arr.sort();
+    for(var i in arr){
+        console.log(arr[i]);
+    }
+  }
+</script>

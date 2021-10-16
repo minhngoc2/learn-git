@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+}
+.thang{
+    display: grid;
+    background-color: red;
+    grid-row: 2/5;
+    grid-column-start: 3;
+}
+.ngang{
+    grid-row-start: 3;
+    grid-column: 2/5;
+    background-color: red;
+}
+ .thang{
+    width: 100px;
+    height: 300px;
+}
+.ngang{
+    width: 300px;
+    height: 100px;
+} 
