@@ -1,0 +1,38 @@
+<script>
+     // Bài 5.
+  /*Viết 1 function lấy ra 1 số nhỏ nhất trong 1 mảng các số.
+  Tham số truyền vào là 1 mảng các số.
+  Kết quả là số nhỏ nhất trong mảng.
+  Gợi ý: có thể dùng phương thức sort() hoặc object Math, chú ý khi sort số khác với chữ.
+  */
+  function minNumber() {
+    var arr = [];
+    var i = 0;
+    for (var param of arguments) {
+      arr[i++] = param;
+    }
+    arr.sort();
+    return arr[0];
+  }
+
+  // Bài 6. Cho 1 mảng gồm tên của 5 học viên. Hãy viết function sắp xếp lại thứ tự các học
+  //viên theo bảng chữ cái và in ra màn hình danh sách học viên.
+
+  // Tham số truyền vào là 1 mảng gồm tên của 5 người.
+  // Kết quả: In ra màn hình danh sách các học viên theo thứ tự bảng chữ cái (tiếng Anh),
+  //mỗi người trên 1 dòng.
+  // Gợi ý: dùng phương thức join() để biến 1 mảng thành 1 chuỗi và chèn thêm ký tự <br>
+  //để hiển thị xuống dòng trong HTML..
+
+  function rearrangeStudent() {
+    var arr = [];
+    var i = 0;
+    for (var param of arguments) {
+      arr[i++] = param;
+    }
+    arr.sort();
+    for(var i in arr){
+        console.log(arr[i]);
+    }
+  }
+</script>
