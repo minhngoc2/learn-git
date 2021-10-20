@@ -5,14 +5,13 @@
   Kết quả là số nhỏ nhất trong mảng.
   Gợi ý: có thể dùng phương thức sort() hoặc object Math, chú ý khi sort số khác với chữ.
   */
-  function minNumber() {
-    var arr = [];
-    var i = 0;
-    for (var param of arguments) {
-      arr[i++] = param;
-    }
-    arr.sort();
-    return arr[0];
+  function minNumber(params) {
+    params.sort(function(a, b) {
+      if(a > b) return 1;
+      if(a < b) return -1;
+      return 0;
+    })
+    console.log(params[0]);
   }
 
   // Bài 6. Cho 1 mảng gồm tên của 5 học viên. Hãy viết function sắp xếp lại thứ tự các học
@@ -24,15 +23,11 @@
   // Gợi ý: dùng phương thức join() để biến 1 mảng thành 1 chuỗi và chèn thêm ký tự <br>
   //để hiển thị xuống dòng trong HTML..
 
-  function rearrangeStudent() {
-    var arr = [];
-    var i = 0;
-    for (var param of arguments) {
-      arr[i++] = param;
-    }
-    arr.sort();
-    for(var i in arr){
-        console.log(arr[i]);
+  function rearrangeStudent(students) {
+    students.sort();
+    for(var i = 0; i < students.length; i++){
+      document.write(students[i]);
+      document.write("<br>");
     }
   }
 </script>
