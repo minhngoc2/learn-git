@@ -11,13 +11,12 @@
         //   Bài 1. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép chuỗi đó lên 10 lần,
     //ngăn cách nhau bởi ký tự "-". Ví dụ cho chuỗi
     //"123" thì kết quả sẽ là "123-123-123-123-123-123-123-123-123-123".
-    function repeatString(xau) {
-      for (let i = 0; i < 10; i++) {
-        document.write(xau);
-        if (i < 9) {
-          document.write("-");
+    function repeatString(input) {
+        result = input;
+        for(let i = 0; i < 9; i++){
+            result += '-' + input;
         }
-      }
+        return result;
     }
     /*
     Bài 2. Cho 1 số nguyên dương n. 
@@ -49,10 +48,10 @@
    và in ra màn hình danh sách học viên kèm theo số thứ tự 
    (sử dụng document.write()).
   */
-    function sortStudents(Students){
-      sortStudents = Students.sort();
-      for(let i = 0; i < Students.length; i++){
-        document.write(`${i+1}. ${Students[i]}`)
+    function sortStudents(students){
+      sortStudents = students.sort();
+      for(let i = 0; i < students.length; i++){
+        document.write(`${i+1}. ${students[i]}`)
         document.write("<br>");
       }
     }
@@ -80,14 +79,18 @@
      những giá trị là chẵn sẽ có màu xanh, 
      những giá trị là lẻ có màu đỏ.*/
      function printColor(){
-         for(let i = 1; i <= 100; i++){
-             if(i % 2 == 0){
-                 document.write(`<p style=\"color: green\">${i}</p>`);
-             }
-             else{
-                document.write(`<p style=\"color: red\"> ${i} </p>`);
-             }
-         }
+        //  for(let i = 1; i <= 100; i++){
+        //      if(i % 2 == 0){
+        //          document.write(`<p style=\"color: green\">${i}</p>`);
+        //      }
+        //      else{
+        //         document.write(`<p style=\"color: red\"> ${i} </p>`);
+        //      }
+        //  }
+        for(let i = 0,j=1; i <= 100,j<=100; i += 2,j+=2){
+            document.write(`<p style=\"color: green\">${i}</p>`);
+            document.write(`<p style=\"color: red\"> ${j} </p>`);
+        }
     }
     </script>
 </body>
