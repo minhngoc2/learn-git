@@ -49,8 +49,8 @@
 
         function findSimilarEnd(string, target){
             let index = string.length;
-            index = index - target.length;
-            subString = string.slice(index);
+            index = index - target.length -1;
+            let subString = string.slice(index);
             if(subString == target)    return true;
             return false;
         }
