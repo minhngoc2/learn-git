@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm-Test Javascript</title>
+</head>
+<body>
+    <script>
+        /*
+        Bài 1: Viết hàm chuyển đổi nhiệt độ từ độ C sang độ F, 
+        tham số truyền vào là 1 số nguyên biểu thị độ C. Ví dụ tham số truyền vào là -30 
+        thì kết quả trả về là -22.
+        */
+        function CtoF(temperature){
+            return (temperature * 9) / 5 + 32;
+        }
+
+        /*
+        Bài 2: Cho 1 mảng có độ dài lớn hơn 2, chứa các số khác nhau. Hãy viết hàm tìm ra số lớn thứ nhì trong mảng.
+        */
+        function secondMax(numbers){
+            numbers.sort(function(a, b){return b-a});
+            return numbers[1];
+        }
+
+        /*
+        Bài 3: Cho 1 mảng các chuỗi bất kỳ có độ dài khác nhau. 
+        Hãy viết hàm tìm ra chuỗi có độ dài lớn nhất.
+        */
+        function maxLength(strings){
+            let max = 0;
+            let index = 0;
+            for(let i = 0; i < strings.length; i++){
+                if(strings[i].length > max){
+                    max = strings[i].length;
+                    index = i;
+                }
+            }
+            return strings[index];
+        }
+
+        /*
+        Bài 4: Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, 
+        dùng để kiểm tra chuỗi string có kết thúc bởi chuỗi target hay không.
+         Kết quả trả về là true hoặc false
+        */
+
+        function findSimilarEnd(string, target){
+            let index = string.length;
+            index = index - target.length;
+            subString = string.slice(index);
+            if(subString == target)    return true;
+            return false;
+        }
+        /*
+        Bài 5: Cho 1 mảng các chuỗi. 
+        Hãy kiểm tra xem trong mảng đó có phần tử nào bị lặp lại hay không (xuất hiện 2 lần trở lên). 
+        Kết quả trả về true (nếu lặp) hoặc false (nếu không lặp).
+        */
+       function test(input){
+           let n = input.length;
+           for(let i = 0; i < n; i++){
+               for(let j = i +1; j < n; j++){
+                   if(input[i] == input[j]){
+                       return true;
+                   }
+               }
+           }
+           return false;
+       }
+
+    </script>
+</body>
+</html>
