@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-login">
+        <h1>Page Register</h1>
+        <div class="form-text">
+          <label>Username</label>
+          <input type="text" />
+        </div>
+        <div class="form-text">
+          <label>Password</label>
+          <input type="password" />
+        </div>
+        <div class="form-text">
+          <label>Confirm-Password</label>
+          <input type="password" />
+        </div>
+        <button onclick="register()">
+            Register
+        </button>
+        <script>
+          const formLogin = document.querySelectorAll(".form-text input");
+          const formLabel = document.querySelectorAll(".form-text label");
+          for (let i = 0; i < 3; i++) {
+            formLogin[i].addEventListener("mouseover", function () {
+              formLabel[i].classList.add("focus");
+            });
+            formLogin[i].addEventListener("mouseout", function () {
+              if (formLogin[i].value == "") {
+                formLabel[i].classList.remove("focus");
+              }
+            });
+          }
+          function register(){
+              document.write("<h1>Đăng ký tài khoản thành công</h1>")
+          }
+        </script>
+      </form>
+    </div>
+  </body>
+</html>
