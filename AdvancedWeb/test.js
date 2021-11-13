@@ -17,14 +17,20 @@ function copyContent(paragraph1, paragraph2){
 function changeFontSize(x){
     let arr = document.getElementsByTagName("p");
     for(element of arr){
-        element.style.fontSize = x;
+        element.style.fontSize = x +"px";
     }
 }
 
 function increaseFontSize(paragraph){
-    document.getElementById(`${paragraph}`).style.fontSize = "calc(100% + 1px)";
+    const fontSize = parseFloat(document.getElementById(paragraph).style.fontSize);
+    if(fontSize <= 29){
+        document.getElementById(paragraph).style.fontSize = fontSize + 1 + "px";
+    }
 }
 
 function decreaseFontSize(paragraph){
-    document.getElementById(`${paragraph}`).style.fontSize = "calc(100% - 1px)";
+    const fontSize = parseFloat(document.getElementById(paragraph).style.fontSize);
+    if(fontSize >= 11){
+        document.getElementById(paragraph).style.fontSize = fontSize -1 + "px";
+    }
 }
