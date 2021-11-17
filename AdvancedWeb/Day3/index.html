@@ -1,4 +1,53 @@
-function Validator(options) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <h1 id="showLoginSuccessful" style="text-align: center; font-size: 5vh; display: none;">Login Succesful</h1>
+        <form action="" method="POST" class="form" id="form-1">
+          
+          <h3 class="heading">Page Login</h3>
+          <p class="desc">Form Login </p>
+  
+          <div class="spacer"></div>
+  
+       
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="VD: minh.itptit@domain.com"
+              class="form-control"
+            />
+            <span class="form-message"></span>
+          </div>
+  
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Nhập mật khẩu"
+              class="form-control"
+            />
+            <span class="eye"> <i id="eyeNotSlash" style="font-size: 24px;"class="fas fa-eye" onclick="showHiddenPassword()"></i> <i id="eyeSlash" style="font-size: 24px; display: none;"class="fas fa-eye-slash" onclick="showHiddenPassword()"></i></span>
+            <span class="form-message"></span>
+          </div>
+  
+          <button type="button" class="form-submit" onclick="checkLogin()">Login</button>
+        </form>
+        <script>
+            function Validator(options) {
   function validate(inputElement, rule) {
     let errorMessage = rule.test(inputElement.value);
     let errorElement = inputElement.parentElement.querySelector(
@@ -113,9 +162,9 @@ function showHiddenConfirmPassword() {
     }
 }
 
-function checkRegister(){
+function checkLogin(){
   document.querySelector("#form-1").style.display = "none";
-  document.getElementById("showRegisterSuccessful").style.display = "block";
+  document.getElementById("showLoginSuccessful").style.display = "block";
 
   
 }
@@ -125,11 +174,10 @@ Validator({
         form: "#form-1",
         errorSelector: ".form-message",
         rules: [
-          Validator.isRequired("#fullname"),
           Validator.isEmail("#email"),
           Validator.minMaxLength("#password", 6, 32),
-          Validator.isConfirmed("#password_confirmation", function() {
-            return document.querySelector("#form-1 #password").value;
-          })
         ],
       });
+        </script>
+</body>
+</html>

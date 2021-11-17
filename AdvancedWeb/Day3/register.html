@@ -5,130 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Register</title>
-    <style>
-      * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline: none;
-}
-a {
-  text-decoration: none;
-}
-:root {
-  --bg1: #9b59b6;
-  --bg2: #3498db;
-  --text: #26ade4;
-}
-html {
-  color: #333;
-  font-size: 62.5%;
-  font-family: "Open Sans", sans-serif;
-}
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom right, var(--bg1), var(--bg2));
-}
-.form {
-    width: 360px;
-    min-height: 100px;
-    padding: 32px 24px;
-    text-align: center;
-    background: #fff;
-    border-radius: 2px;
-    margin: 24px;
-    align-self: center;
-    box-shadow: 0 2px 5px 0 rgba(51,62,73,.1);
-}
-.form .heading {
-    font-size: 2rem;
-}
-.form .desc {
-    text-align: center;
-    color: #636d77;
-    font-size: 1.6rem;
-    font-weight: lighter;
-    line-height: 2.4rem;
-    margin-top: 16px;
-    font-weight: 300;
-}
-.form-group {
-    display: flex;
-    margin-bottom: 16px;
-    flex-direction: column;
-    position: relative;
-}
-.form-label,
-.form-message {
-    text-align: left;
-}
-.form-label {
-    font-weight: 700;
-    padding-bottom: 6px;
-    line-height: 1.8rem;
-    font-size: 1.4rem;
-}
-.form-control {
-    height: 40px;
-    padding: 8px 12px;
-    border: 1px solid #b3b3b3;
-    border-radius: 3px;
-    outline: none;
-    font-size: 1.4rem;
-}
-.form-control:hover {
-    border-color: #1dbfaf;
-}
-
-.form-group.invalid .form-control {
-  border-color: #f33a58;
-}
-
-.form-group.invalid .form-message {
-  color: #f33a58;
-}
-.form-message {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    padding: 4px 0 0;
-}
-.form-submit {
-    outline: none;
-    background-color: #1dbfaf;
-    margin-top: 12px;
-    padding: 12px 16px;
-    font-weight: 600;
-    color: #fff;
-    border: none;
-    width: 100%;
-    font-size: 14px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.form-submit:hover {
-    background-color: #1ac7b6;
-}
-.spacer {
-    margin-top: 36px;
-}
-.eye{
-    position: absolute;
-    top: 30px;
-    right: 2px;
-}
-span img {
-    cursor: pointer;
-}
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
   </head>
   <body>
     <div class="main">
+      <h1 id="showRegisterSuccessful" style="text-align: center; font-size: 5vh; display: none;">Register Succesful</h1>
       <form action="" method="POST" class="form" id="form-1">
+        
         <h3 class="heading">Page Register</h3>
         <p class="desc">Form Register </p>
 
@@ -167,7 +51,7 @@ span img {
             placeholder="Nhập mật khẩu"
             class="form-control"
           />
-          <span class="eye"><img src="../AdvancedWeb/Day3/images/eye.png" alt="eye" width="30px" onclick="showHiddenPassword()"></span>
+          <span class="eye"> <i id="eyeNotSlash" style="font-size: 24px;"class="fas fa-eye" onclick="showHiddenPassword()"></i> <i id="eyeSlash" style="font-size: 24px; display: none;"class="fas fa-eye-slash" onclick="showHiddenPassword()"></i></span>
           <span class="form-message"></span>
         </div>
 
@@ -182,133 +66,13 @@ span img {
             type="password"
             class="form-control"
           />
-          <span class="eye"><img src="../AdvancedWeb/Day3/images/eye.png" alt="eye" width="30px" onclick="showHiddenConfirmPassword()"></span>
-
+          
+          <span class="eye"><i id="eyeNotSlashConfirm"style="font-size: 24px"class="fas fa-eye" onclick="showHiddenConfirmPassword()"></i> <i id="eyeSlashConfirm"style="font-size: 24px; display: none;"class="fas fa-eye-slash" onclick="showHiddenConfirmPassword()"></i></span>
           <span class="form-message"></span>
         </div>
 
-        <button class="form-submit">Register</button>
+        <button type="button" class="form-submit" onclick="checkRegister()">Register</button>
       </form>
-    <script>
-      function Validator(options) {
-  function validate(inputElement, rule) {
-    let errorMessage = rule.test(inputElement.value);
-    let errorElement = inputElement.parentElement.querySelector(
-      options.errorSelector
-    );
-    if (errorMessage) {
-      errorElement.innerText = errorMessage;
-      inputElement.parentElement.classList.add("invalid");
-    } else {
-      errorElement.innerText = "";
-      inputElement.parentElement.classList.remove("invalid");
-    }
-  }
-
-  let formElement = document.querySelector(options.form);
-  if (formElement) {
-    options.rules.forEach(function (rule) {
-      let inputElement = formElement.querySelector(rule.selector);
-      let errorElement =
-        inputElement.parentElement.querySelector(options.errorSelector);
-      if (inputElement) {
-        // blurOut input
-        inputElement.onblur = function () {
-          validate(inputElement, rule);
-        };
-
-        // Enter Input
-        inputElement.oninput = function () {
-          let errorElement = inputElement.parentElement.querySelector(
-            options.errorSelector
-          );
-          errorElement.innerText = "";
-          inputElement.parentElement.classList.remove("invalid");
-        };
-      }
-    });
-  }
-}
-Validator.isRequired = function (selector) {
-  return {
-    selector: selector,
-    test: function (value) {
-      return value.trim() ? undefined : "Vui Long Nhap Truong Nay";
-    },
-  };
-};
-Validator.isEmail = function (selector) {
-  return {
-    selector: selector,
-    test: function (value) {
-      let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      return regex.test(value) ? undefined : "Truong nay phai la email";
-    },
-  };
-};
-
-Validator.minMaxLength = function (selector, min, max) {
-  return {
-    selector: selector,
-    test: function (value) {
-        if(value.length < min){
-            return `Enter min ${min} characters!`
-        }
-        else{
-            if(value.length >= max){
-                return `Enter <= ${max} characters!`;
-            }
-        }
-    },
-  };
-};
-
-
-Validator.isConfirmed = function (selector, getConfirmValue) {
-    return {
-        selector: selector,
-        test: function(value) {
-            return value === getConfirmValue() ? undefined : 'Invalid ConfirmPassword';
-        }
-    }
-}
-isBool = true;
-
-function showHiddenPassword() {
-    if(isBool){
-        document.getElementById("password").setAttribute("type", "text");
-        isBool = false;
-    }
-    else{
-        document.getElementById("password").setAttribute("type", "password");
-        isBool = true;
-    }
-}
-check = true;
-function showHiddenConfirmPassword() {
-    if(check){
-        document.getElementById("password_confirmation").setAttribute("type", "text");
-        check = false;
-    }
-    else{
-        document.getElementById("password_confirmation").setAttribute("type", "password");
-        check = true;
-    }
-}
-    </script>
-    <script>
-      Validator({
-        form: "#form-1",
-        errorSelector: ".form-message",
-        rules: [
-          Validator.isRequired("#fullname"),
-          Validator.isEmail("#email"),
-          Validator.minMaxLength("#password", 6, 32),
-          Validator.isConfirmed("#password_confirmation", function() {
-            return document.querySelector("#form-1 #password").value;
-          })
-        ],
-      });
-    </script>
+      <script src="Validator.js"></script>
   </body>
 </html>
