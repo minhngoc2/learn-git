@@ -89,7 +89,7 @@
       line-height: 1.6rem;
       padding: 4px 0 0;
   }
-  .form-submit {
+  /* .form-submit {
       outline: none;
       background-color: #1dbfaf;
       margin-top: 12px;
@@ -101,7 +101,7 @@
       font-size: 14px;
       border-radius: 8px;
       cursor: pointer;
-  }
+  } */
   /* .form-submit:hover {
       background-color: #1ac7b6;
   } */
