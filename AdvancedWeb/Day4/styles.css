@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    background-color: rgb(13,0,31);
+    /* background-image: url("https://image.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg"); */
+    background-color: rgb(88, 74, 74);
 }
 .container{
-    margin: 10px auto;
-    width: 200px;
+    margin: 450px auto;
+    width: 300px;
 }
 .screen {
     background-color: white;
