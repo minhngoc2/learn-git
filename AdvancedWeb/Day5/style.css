@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+.card{
+    width: 100%;
+    padding: 5px 10px;
+}
+img{
+    width: 100%;
+}
+p{
+    text-align: center;
+}
+a{
+    color: green;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img:hover{
+    transform: scale(1.45);
+    overflow: hidden;
+    transition: 0.3s;
+}
+@media (min-width: 768px){
+    .card{
+        width: calc(100%/2);
+    }
+}
+@media(min-width: 1000px){
+    .card{
+        width: calc(100%/3);
+    }
+}
