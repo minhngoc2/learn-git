@@ -28,7 +28,7 @@ a{
     align-items: center;
 }
 img:hover{
-    transform: scale(1.45);
+    transform: scale(1.2);
     overflow: hidden;
     transition: 0.3s;
 }
@@ -41,4 +41,14 @@ img:hover{
     .card{
         width: calc(100%/3);
     }
+}
+/* Testimonial Section */
+#testimonials {
+    padding: 7% 15%;
+    text-align: center;
+    background-color: #ef8172;
+    color: #fff;
+}
+.testimonial-image {
+    width: 20%;
 }
