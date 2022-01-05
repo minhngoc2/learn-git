@@ -1,0 +1,94 @@
+p {
+  display: inline;
+  font-size: 30px;
+  line-height: 37px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+img {
+  max-width: 100%;
+}
+
+.box-color {
+  height: 33%;
+  background-color: palevioletred;
+}
+.box {
+  height: 25%;
+}
+.bar-main {
+  width: 100%;
+  height: 20px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  margin: 20px 0px;
+  position: relative;
+}
+.bar-sub {
+  height: 100%;
+  background-color: green;
+  border-radius: 8px;
+  width: 80%;
+}
+.bar-sub2 {
+  height: 100%;
+  background-color: green;
+  border-radius: 8px;
+  width: 60%;
+}
+.bar-sub3 {
+  height: 100%;
+  background-color: green;
+  border-radius: 8px;
+  width: 50%;
+}
+.bar-sub4 {
+  height: 100%;
+  background-color: green;
+  border-radius: 8px;
+  width: 20%;
+}
+.bar-sub5 {
+  height: 100%;
+  background-color: green;
+  border-radius: 8px;
+  width: 30%;
+}
+.bar-mirror {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: rgb(121, 191, 231);
+  left: 40%;
+  border-radius: 8px;
+}
+.bar-mirror2 {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: rgb(121, 191, 231);
+  left: 50%;
+  border-radius: 8px;
+}
+.bar-mirror3 {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: rgb(121, 191, 231);
+  left: 20%;
+  border-radius: 8px;
+}
+.bar-mirror4 {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: rgb(121, 191, 231);
+  left: 60%;
+  border-radius: 8px;
+}
+.logo {
+  display: flex;
+}
