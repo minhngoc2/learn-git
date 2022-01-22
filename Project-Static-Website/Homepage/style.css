@@ -108,8 +108,9 @@ a {
 
 
 /* newsletters  */
-.sign-up-newsletters {
-  background: #C4C4C4;;
+#newsletters {
+  background: #C4C4C4;
+
 }
 .sign-up-newsletters h2 {
   padding-top: 3%;
@@ -137,8 +138,26 @@ a {
 /* end newsletters  */
 
 /* SECTION FOOTER  */
-
 .container-footer {
+   text-align: center;
+   color: white;
+    background: #0C0C0C;
+    padding-bottom: 1%;
+}
+.container-footer p {
+  line-height: 20px;
+}
+.subTitle {
+  font-weight: 600;
+}
+@media (min-width: 992px){
+  .container-footer p {
+    line-height: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .container-footer {
   display: flex;
   justify-content: space-between;
+  }
 }
