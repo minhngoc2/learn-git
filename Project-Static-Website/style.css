@@ -74,3 +74,71 @@ a {
   text-align: center;
   font-weight: 900;
 }
+/* NEW PRODUCT  */
+.line-through {
+  text-decoration: line-through;
+}
+.sale {
+  color: red;
+}
+.right {
+  width: 50%;
+}
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 4%;
+}
+.circle-green {
+  background: #7AFF77;
+}
+.circle-cyan {
+  background: #25BDB0;
+}
+.circle-pink {
+  background: #FFC0CB;
+}
+.circle-black {
+  background: #0C0C0C;
+}
+.circle-blue {
+  background: #77BEFF;
+}
+
+
+/* newsletters  */
+.sign-up-newsletters {
+  background: #C4C4C4;;
+}
+.sign-up-newsletters h2 {
+  padding-top: 3%;
+}
+.desc {
+  text-align: center;
+}
+.form{
+  height: 50px;
+}
+.form > input {
+  width: 40%;
+  height: 100%;
+}
+.form > button {
+  height: 100%;
+  width: 20%;
+}
+.logo {
+  text-align: center;
+}
+.press-logo {
+  margin: 1%;
+}
+/* end newsletters  */
+
+/* SECTION FOOTER  */
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+}

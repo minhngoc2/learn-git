@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
-  
-</head>
-<body>
-    <h1 class="pc">PC</h1>
-    <h1 class="tl">Tablet</h1>
-    <h1 class="mb">Mobile</h1>
-    <h2>aaaa</h2>
-</body>
+  </head>
+  <body>
+    <div class="box">
+      <div class="children">Children</div>
+      <div class="children">Children</div>
+    </div>
+    <script>
+      var listItems1 = document.querySelectorAll(".parent>li");
+      var listItems2 = document.querySelectorAll(".parent>ul>li");
+      var listItems3 = document.querySelectorAll(
+        ".parent > li, .parent > ul > li"
+      );
+
+      console.log(listItems1);
+      console.log(listItems2);
+      console.log(listItems3);
+    </script>
+  </body>
 </html>
