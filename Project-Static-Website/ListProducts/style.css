@@ -1,0 +1,15 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+/* Header Section  */
+h6 {
+  font-weight: 600;
+}
+.banner {
+}
