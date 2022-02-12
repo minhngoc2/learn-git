@@ -11,5 +11,7 @@ a {
 h6 {
   font-weight: 600;
 }
-.banner {
+.banner > img {
+  width: 100%;
+  height: 10%;
 }

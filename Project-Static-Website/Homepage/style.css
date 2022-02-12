@@ -91,26 +91,24 @@ a {
   margin: 4%;
 }
 .circle-green {
-  background: #7AFF77;
+  background: #7aff77;
 }
 .circle-cyan {
-  background: #25BDB0;
+  background: #25bdb0;
 }
 .circle-pink {
-  background: #FFC0CB;
+  background: #ffc0cb;
 }
 .circle-black {
-  background: #0C0C0C;
+  background: #0c0c0c;
 }
 .circle-blue {
-  background: #77BEFF;
+  background: #77beff;
 }
-
 
 /* newsletters  */
 #newsletters {
-  background: #C4C4C4;
-
+  background: #c4c4c4;
 }
 .sign-up-newsletters h2 {
   padding-top: 3%;
@@ -118,7 +116,7 @@ a {
 .desc {
   text-align: center;
 }
-.form{
+.form {
   height: 50px;
 }
 .form > input {
@@ -138,26 +136,29 @@ a {
 /* end newsletters  */
 
 /* SECTION FOOTER  */
-.container-footer {
-   text-align: center;
-   color: white;
-    background: #0C0C0C;
-    padding-bottom: 1%;
+#footer {
+  background: #0c0c0c;
 }
-.container-footer p {
+.wrapper {
+  text-align: center;
+  color: white;
+  padding: 0% 2% 1%;
+  width: 100%;
+}
+.wrapper p {
   line-height: 20px;
 }
 .subTitle {
   font-weight: 600;
 }
-@media (min-width: 992px){
-  .container-footer p {
+@media (min-width: 992px) {
+  .wrapper p {
     line-height: 10px;
   }
 }
 @media (min-width: 768px) {
-  .container-footer {
-  display: flex;
-  justify-content: space-between;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
