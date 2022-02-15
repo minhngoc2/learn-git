@@ -1,0 +1,146 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+h6 {
+  font-weight: 600;
+}
+.line-through {
+  text-decoration: line-through;
+  font-weight: 600;
+}
+.sale {
+  color: red;
+  font-weight: 900;
+}
+/* BODY SECTION  */
+.row1 {
+  display: flex;
+  flex-direction: column;
+}
+#body > .container {
+  display: flex;
+}
+.title > h3 {
+  font-weight: 800;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-green {
+  background: #7aff77;
+}
+.circle-cyan {
+  background: #25bdb0;
+}
+.circle-pink {
+  background: #ffc0cb;
+}
+.circle-black {
+  background: #0c0c0c;
+}
+.circle-blue {
+  background: #77beff;
+}
+.circle-border {
+  border: 1px solid black;
+  border-radius: 100%;
+}
+.buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-or-delete {
+  display: flex;
+}
+.number {
+  font-size: 20px;
+}
+/* .fas {
+  padding: 30%;
+} */
+.title > p {
+  font-size: 1.3rem;
+}
+.price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  background-color: #f86646;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.function {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-minus {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.icon-plus {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+button {
+}
+form {
+  position: relative;
+}
+/* END BODY SECTION  */
+.color {
+  font-weight: 600;
+}
+.size {
+  font-weight: 600;
+}
+.tutorial {
+  font-weight: 600;
+}
+.delivery {
+  font-weight: 600;
+}
+.question {
+  font-weight: 600;
+}
+
+/* Description section  */
+
+.description h2 {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.row p {
+  font-weight: 600;
+}
+.icon {
+  margin: 2%;
+}

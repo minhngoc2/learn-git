@@ -7,6 +7,7 @@ img {
 a {
   text-decoration: none;
 }
+
 /* Header Section  */
 h6 {
   font-weight: 600;
@@ -14,4 +15,108 @@ h6 {
 .banner > img {
   width: 100%;
   height: 10%;
+}
+/* List Products  */
+.container > .title {
+  display: flex;
+  justify-content: space-between;
+}
+.title > h2 {
+  font-weight: 600;
+}
+
+.right {
+  width: 50%;
+}
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 4%;
+}
+.circle-green {
+  background: #7aff77;
+}
+.circle-cyan {
+  background: #25bdb0;
+}
+.circle-pink {
+  background: #ffc0cb;
+}
+.circle-black {
+  background: #0c0c0c;
+}
+.circle-blue {
+  background: #77beff;
+}
+
+/* End List Products  */
+/* Pagination  */
+.page-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Pagination  */
+
+/* newsletters  */
+#newsletters {
+  background: #c4c4c4;
+}
+.sign-up-newsletters h2 {
+  padding-top: 3%;
+}
+.desc {
+  text-align: center;
+}
+.form {
+  height: 50px;
+}
+.form > input {
+  width: 40%;
+  height: 100%;
+}
+.form > button {
+  height: 100%;
+  width: 20%;
+}
+.logo {
+  text-align: center;
+}
+.press-logo {
+  margin: 1%;
+}
+/* end newsletters  */
+
+/* SECTION FOOTER  */
+#footer {
+  background: #0c0c0c;
+}
+.wrapper {
+  text-align: center;
+  color: white;
+  padding: 0% 2% 1%;
+  width: 100%;
+}
+.wrapper p {
+  line-height: 20px;
+}
+.subTitle {
+  font-weight: 600;
+}
+.sub-title {
+  font-weight: 900;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .wrapper p {
+    line-height: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }

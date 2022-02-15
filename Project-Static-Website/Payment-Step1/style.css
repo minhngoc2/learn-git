@@ -1,0 +1,129 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+.pl {
+  padding-left: 12px;
+}
+/* BANNER SECTION  */
+.back {
+  margin-left: 15%;
+  margin-top: 1%;
+  font-weight: 600;
+  font-style: 2rem;
+}
+.secure {
+  margin-top: 1%;
+  margin-right: 15%;
+  font-weight: 600;
+  font-style: 2rem;
+}
+/* HEADER SECTION  */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  text-align: center;
+  position: relative;
+}
+.box > p {
+  font-weight: 600;
+}
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step > span {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.3px solid black;
+  border-radius: 100%;
+  padding: 1% 1%;
+  font-weight: 600;
+}
+label {
+  padding-bottom: 10px;
+  width: 150px;
+}
+
+/* BODY SECTION  */
+
+.line {
+  width: 200px;
+  height: 3px;
+  background-color: black;
+}
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-number {
+  top: 15%;
+  color: white;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+.title-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+}
+.title > h5 {
+  padding-left: 10px;
+  font-weight: 600;
+}
+.shipping-address {
+  width: 30%;
+}
+.shipping-method {
+  width: 30%;
+}
+.payment-method {
+  width: 30%;
+}

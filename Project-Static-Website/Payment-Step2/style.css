@@ -1,0 +1,46 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER SECTION  */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  text-align: center;
+  position: relative;
+}
+.box > p {
+  padding-top: 1.5%;
+  font-weight: 600;
+}
+.step > span {
+  border: 1.3px solid black;
+  border-radius: 100%;
+  padding: 1% 1%;
+  font-weight: 600;
+}
+.checked {
+  background-color: black;
+}
+.line {
+  background: black;
+  width: 75%;
+  height: 4%;
+  position: absolute;
+}
+.line1 {
+  top: 56%;
+  left: 125%;
+}
+.line2 {
+  top: 56%;
+  right: -104%;
+}
