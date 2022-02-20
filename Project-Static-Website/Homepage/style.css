@@ -105,6 +105,18 @@ a {
 .circle-blue {
   background: #77beff;
 }
+.circle-orange {
+  background: #ff9f45;
+}
+.circle-violet {
+  background: violet;
+}
+.cicle-slateblue {
+  background: slateblue;
+}
+.circle-yellow {
+  background: yellow;
+}
 
 /* newsletters  */
 #newsletters {

@@ -21,6 +21,13 @@ h6 {
 input[type="radio"] {
   margin-right: 5px;
 }
+.block2 {
+  margin-bottom: 5%;
+}
+.next-step {
+  margin-top: 5%;
+}
+
 .pl {
   padding-left: 12px;
 }
@@ -30,6 +37,14 @@ input[type="radio"] {
   margin-top: 1%;
   font-weight: 600;
   font-style: 2rem;
+  position: relative;
+}
+.back:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.arrow-back {
+  position: relative;
 }
 .secure {
   margin-top: 1%;
@@ -38,10 +53,18 @@ input[type="radio"] {
   font-style: 2rem;
 }
 /* HEADER SECTION  */
+#header {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.wrapper2 {
+  display: flex;
+  justify-content: space-between;
 }
 .box {
   text-align: center;
@@ -126,4 +149,30 @@ label {
 }
 .payment-method {
   width: 30%;
+}
+@media (max-width: 768px) {
+  .wrapper2 {
+    display: block;
+    padding: 2% 10%;
+  }
+  .shipping-address {
+    width: 100%;
+  }
+  .shipping-method {
+    width: 100%;
+    margin: 25px 0px;
+  }
+  .payment-method {
+    width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  .box2 {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .box3 {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 }

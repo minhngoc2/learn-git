@@ -281,23 +281,100 @@
     <!-- ----------------------------  Title & Filter  -------------------------------------  --  -->
     <div class="container mt-5">
       <div class="title">
-        <div class="filter">AA</div>
+        
+        <div display: none;></div>
+
         <h2>Váy ngắn tây âu</h2>
-        <div class="sort">BB</div>
+        <button class="sort" id="sort"> <p class="feature"><strong>Đặc điểm</strong></p>
+          <i class="fas fa-angle-down down" ></i>
+          <div class="menu" id="menu">
+            <p class="sub-menu">Bán chạy nhất</p>
+            <p class="sub-menu">Sắp xếp theo A-Z</p>
+            <p class="sub-menu">Sắp xếp theo Z-A</p>
+            <p class="sub-menu">Giá từ thấp đến cao</p>
+            <p class="sub-menu">Giá từ cao đến thấp</p>
+            <p class="sub-menu">Từ mới đến cũ</p>
+          </div>
+        </button>
       </div>
     </div>
+    
+    <!-- Filter  -->
+    <div class="container">
+      <div class="filter" > 
+        <button id="filter">
+          <i class="fas fa-filter"></i> <strong>Bộ lọc</strong>
+        </button>
+        <div class="row filter-row" id="row-filter">
+        <div class="col col1">
+          <div class="filter-color">
+            <h4 class="mb-3" style="text-decoration: underline;">Màu sắc</h4>
+            <div class="black d-flex">
+              <div class="circle circle-black"></div>
+              <span>Đen (2)</span>
+            </div>
+            <div class="blue d-flex">
+              <div class="circle circle-blue"></div>
+              <span>Xanh lam (1)</span>
+            </div>
+            <div class="cyan d-flex">
+              <div class="circle circle-cyan"></div>
+              <span>Lục lam (2)</span>
+            </div>
+            <div class="green d-flex">
+              <div class="circle circle-green"></div>
+              <span>Xanh lá (1)</span>
+            </div>
+            <div class="pink d-flex">
+              <div class="circle circle-pink"></div>
+              <span>Hồng (2)</span>
+            </div>
+            <div class="red d-flex">
+              <div class="circle circle-red"></div>
+              <span>Đỏ (1)</span>
+            </div>
+          </div>
+          <div class="filter-price mt-3">
+            <h4 class="title-filter-price"style="text-decoration: underline;">Giá Tiền</h4>
+            <div class="filter-box">
+              <div class="filter-line"></div>
+            </div>
+            <p class="mt-4">Price: <b>$0.00 - $100</b></p>
+            <button class="btn btn-outline-dark mt-4 btn-lg">Tìm Kiếm</button>
+          </div>
+        </div>
+        <div class="col col2">
+          <h4 style="text-decoration: underline;">Kích cỡ</h4>
+          <p >XS (1)</p>
+          <p >S (1)</p>
+          <p >M (1)</p>
+          <p >L (1)</p>
+          <p >XL (1)</p>
+          <p >XXL (1)</p>
+          <h4 class="available"style="text-decoration: underline;">Hàng có sẵn</h4>
+          <p>Nổi bật (15)</p>
+          <p>Mới về (10)</p>
+          <p>Giảm giá (25)</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- End Filter  -->
+    
+    
     <!-- ----------------------------  End Title & Filter  -------------------------------------  --  -->
 
     <!-- ----------------------------  List Products  -------------------------------------  --  -->
 
     <section class="list-product mt-5">
-      <div class="container">
+      <div style="position: relative" class="container">
+
         <!-- Row 1  -->
         <div class="row">
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_1 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -320,7 +397,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_3 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -343,7 +420,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_2 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -366,7 +443,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_4 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -392,7 +469,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_s-new11 1.jpg" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -415,7 +492,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/products_2 2.jpg" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -438,7 +515,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_s-new15 1.jpg" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -461,7 +538,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/products_3 1.jpg" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -487,7 +564,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/blog4 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -510,7 +587,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_s-new2 2.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -533,7 +610,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_s-new10 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -556,7 +633,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-header">
-                <img src="../Homepage/images/product_1.jpg" alt="product1" />
+                <img src="images/product_s-new9 1.png" alt="product1" />
               </div>
               <div class="card-body d-flex">
                 <div class="left">
@@ -663,6 +740,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="main.js">
+      
+    </script>
   </body>
 </html>
