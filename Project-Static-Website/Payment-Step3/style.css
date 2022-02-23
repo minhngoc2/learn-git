@@ -6,6 +6,8 @@ img {
 }
 a {
   text-decoration: none;
+  font-weight: 600;
+  color: black;
 }
 p {
   margin: 0;
@@ -18,8 +20,9 @@ h5,
 h6 {
   margin: 0;
 }
-input[type="radio"] {
-  margin-right: 5px;
+.address-2 {
+  width: 146px;
+  font-weight: 600;
 }
 .block2 {
   margin-bottom: 5%;
@@ -61,10 +64,6 @@ input[type="radio"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.wrapper2 {
-  display: flex;
-  justify-content: space-between;
 }
 .box {
   text-align: center;
@@ -141,20 +140,21 @@ label {
   padding-left: 10px;
   font-weight: 600;
 }
-.shipping-address {
-  width: 30%;
+
+.line-through {
+  text-decoration: line-through;
 }
-.shipping-method {
-  width: 30%;
+.sale {
+  color: red;
+  font-weight: 600;
 }
-.payment-method {
-  width: 30%;
+/* .wrapper2 {
+  flex: 1;
+} */
+.address {
+  display: flex;
 }
 @media (max-width: 768px) {
-  .wrapper2 {
-    display: block;
-    padding: 2% 10%;
-  }
   .shipping-address {
     width: 100%;
   }
@@ -184,4 +184,18 @@ label {
   .wrapper2 {
     margin-top: 50px;
   }
-} ;
+}
+
+@media (min-width: 768px) {
+  .wrapper3 {
+    float: right;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-responsive {
+    display: block !important;
+  }
+  .wrapper3 {
+    margin-top: 50px;
+  }
+}

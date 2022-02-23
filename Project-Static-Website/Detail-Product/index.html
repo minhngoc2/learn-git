@@ -289,7 +289,7 @@
                 non turpis
               </div>
               <div class="color">
-                <h4>Màu sắc: Đen</h4>
+                <h6>Màu sắc: Đen</h6>
                 <div class="box d-flex">
                   <div class="circle circle-black"></div>
                   <div class="circle circle-cyan"></div>
@@ -297,7 +297,7 @@
                 </div>
               </div>
               <div class="size">
-                <h4>Kích cỡ: S</h4>
+                <h6>Kích cỡ: S</h6>
                 <div class="box d-flex">
                   <div class="circle circle-border">S</div>
                   <div class="circle">M</div>
@@ -306,6 +306,15 @@
               </div>
               <div class="function">
                 <div class="add-or-delete">
+                  <h6
+                    style="
+                      font-weight: 600;
+                      margin-right: 20px;
+                      margin-bottom: 15px;
+                    "
+                  >
+                    Số lượng: <span id="quantity-number">1</span>
+                  </h6>
                   <form action="#">
                     <input
                       style="text-align: center"
@@ -326,16 +335,31 @@
                     </span>
                   </form>
                 </div>
+              </div>
+              <div class="Button d-flex">
                 <div class="purchase-now">
-                  <button class="btn btn-dark">Mua Ngay</button>
+                  <button
+                    class="btn btn-dark w-100"
+                    style="border-radius: 20px"
+                  >
+                    Mua Ngay
+                  </button>
                 </div>
-                <div class="love">
-                  <i class="fas fa-heart"></i>
+                <div class="add-cart" style="flex: 1">
+                  <button
+                    class="btn btn-dark w-100"
+                    style="border-radius: 20px"
+                  >
+                    Thêm vào giỏ hàng
+                  </button>
                 </div>
               </div>
-              <div class="tutorial">Hướng dẫn chọn cỡ</div>
-              <div class="delivery">Giao hàng và đổi trả</div>
-              <div class="question">Đặt câu hỏi để được tư vấn</div>
+              <div class="desc">
+                <div class="tutorial">Hướng dẫn chọn cỡ</div>
+                <div class="delivery">Giao hàng và đổi trả</div>
+                <div class="question">Đặt câu hỏi để được tư vấn</div>
+              </div>
+              <div class="transparent-box"></div>
             </div>
           </div>
         </div>
@@ -353,12 +377,20 @@
           pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget
           euismod ullamcorper, lectus nunc ullamcorper orci.
         </p>
-        <div class="row">
+        <div class="row" style="text-align: center">
           <div class="col-md-4 col-12">
-            <img src="images/product_1 1 4.jpg" alt="product1" />
+            <img
+              style="margin-bottom: 12px"
+              src="images/product_1 1 4.jpg"
+              alt="product1"
+            />
           </div>
           <div class="col-md-4 col-12">
-            <img src="images/product_1 1 4.jpg" alt="product1" />
+            <img
+              style="margin-bottom: 12px"
+              src="images/product_1 1 4.jpg"
+              alt="product1"
+            />
           </div>
           <div class="col-md-4 col-12">
             <img src="images/product_1 1 4.jpg" alt="product1" />
@@ -396,7 +428,11 @@
           </div>
           <div class="col-4">
             <div class="image">
-              <img src="../Homepage/images/product_1.jpg" alt="" />
+              <img
+                style="object-fit: cover; height: 100%"
+                src="../Homepage/images/product_1.jpg"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-4 d-flex justify-content-between flex-column">
@@ -429,5 +465,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

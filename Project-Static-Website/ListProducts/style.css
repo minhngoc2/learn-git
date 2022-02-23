@@ -15,6 +15,12 @@ h6 {
 p {
   margin-bottom: 0;
 }
+.line-through {
+  text-decoration: line-through;
+}
+.sale {
+  color: red;
+}
 #box {
   width: 400px;
   padding: 40px;
@@ -59,9 +65,11 @@ p {
   background: black;
   cursor: pointer;
 }
+
 .filter-row {
   width: 375px;
   position: relative;
+  display: none;
 }
 .filter-box {
   position: relative;
@@ -92,9 +100,11 @@ p {
   width: 4px;
   height: 25px;
 }
-.available {
-  margin-top: 50%;
-  margin-bottom: 30%;
+.filter-price {
+  margin-top: 5px;
+}
+.size {
+  min-height: 260px;
 }
 .col1::before {
   content: "";

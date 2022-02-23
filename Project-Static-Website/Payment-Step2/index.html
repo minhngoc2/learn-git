@@ -26,29 +26,351 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="banner d-flex justify-content-between">
+      <div class="back">
+        <i class="fas fa-arrow-left arrow-back"></i>
+        Quay lại
+      </div>
+      <div class="secure">
+        <img src="Vector.svg" alt="secure" />
+        <span style="margin-left: 5px">Bảo mật thanh toán</span>
+      </div>
+    </div>
     <section id="header">
-      <div class="container">
+      <div class="container block2">
         <div class="wrapper">
           <div class="box box1">
             <div class="step">
-              <span class="checked">
-                <img src="check.svg" alt="check" />
-              </span>
+              <i class="fas fa-check"></i>
             </div>
-            <p>Địa chỉ và phương thức thanh toán</p>
-            <div class="line line1"></div>
+            <p class="pl">Địa chỉ và phương thức thanh toán</p>
           </div>
+          <div class="line line1"></div>
           <div class="box box2">
             <div class="step">2</div>
-            <p>Địa chỉ và phương thức thanh toán</p>
-            <div class="line line2"></div>
+            <p class="pl">Địa chỉ và phương thức thanh toán</p>
           </div>
+          <div class="line line2"></div>
           <div class="box box3">
             <div class="step">3</div>
-            <p>Địa chỉ và phương thức thanh toán</p>
+            <p class="pl">Địa chỉ và phương thức thanh toán</p>
           </div>
         </div>
       </div>
+    </section>
+    <section id="body">
+      <div class="container d-flex justify-content-around wrapper-responsive">
+        <div class="wrapper2">
+          <div class="shipping-address">
+            <div class="title">
+              <div class="title-number">
+                <span>1</span>
+              </div>
+              <h5>Địa chỉ nhận hàng</h5>
+            </div>
+            <div class="name">
+              <label for="">Tên người nhận: </label>
+              <input type="text" value="Nguyễn Ngọc Minh" />
+            </div>
+            <div class="phone-number">
+              <label for="" class="mt-2">Số điện thoại: </label>
+              <input type="text" value="0132467545457" />
+            </div>
+            <div class="address">
+              <label for="" class="mt-2" style="width: 150px">Địa Chỉ: </label>
+              <!-- <input type="text" value="78 Đặng Văn Ngữ" readonly /> -->
+              <div class="address-2">
+                78 Đặng Văn Ngữ, Quận Đống Đa, Thành Phố Hà Nội
+              </div>
+            </div>
+          </div>
+          <div class="shipping-method">
+            <div class="title">
+              <div class="title-number">
+                <span>2</span>
+              </div>
+              <h5 class="title2">Phương thức vận chuyển</h5>
+            </div>
+            <div class="desc d-flex flex-column justify-content-between">
+              <p>Chọn phương thức vận chuyển</p>
+              <div class="radio">
+                <input
+                  type="radio"
+                  name="shipping-method"
+                  value="normal"
+                  checked
+                />
+                Thông Thường <span>59.99</span>
+              </div>
+            </div>
+          </div>
+          <div class="payment-method">
+            <div class="title">
+              <div class="title-number">
+                <span>3</span>
+              </div>
+              <h5 class="title2">Phương thức thanh toán</h5>
+            </div>
+            <div class="desc d-flex flex-column justify-content-between">
+              <p>Chọn phương thức thanh toán</p>
+              <div class="radio">
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="cash-on-delivery"
+                  checked
+                />
+                <span>Cash on delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper3">
+          <h4 style="font-weight: 600">Tổng Hóa Đơn</h4>
+          <div class="cart-product">
+            <div class="card-product-header">
+              <div class="cart-product-item d-flex">
+                <div class="img">
+                  <img src="cart-sp1 5.png" alt="cart-image" />
+                  <div class="quantity">1</div>
+                </div>
+                <div class="text">
+                  <h6>Váy lông vũ dài</h6>
+                  <p>Đỏ / S</p>
+                  <div class="icon">
+                    <i
+                      class="fas fa-edit"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    ></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </div>
+
+                <div class="price1 line-through">$15.00</div>
+                <div class="price2 sale">$10.00</div>
+              </div>
+              <div class="cart-product-item d-flex">
+                <div class="img">
+                  <img src="cart-sp1 5.png" alt="cart-image" />
+                  <div class="quantity">1</div>
+                </div>
+                <div class="text">
+                  <h6>Váy lông vũ dài</h6>
+                  <p>Đỏ / S</p>
+                  <div class="icon">
+                    <i
+                      class="fas fa-edit"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    ></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </div>
+
+                <div class="price1 line-through">$15.00</div>
+                <div class="price2 sale">$10.00</div>
+              </div>
+              <div class="cart-product-item d-flex">
+                <div class="img">
+                  <img src="cart-sp1 5.png" alt="cart-image" />
+                  <div class="quantity">1</div>
+                </div>
+                <div class="text">
+                  <h6>Váy lông vũ dài</h6>
+                  <p>Đỏ / S</p>
+                  <div class="icon">
+                    <i
+                      class="fas fa-edit"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    ></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </div>
+
+                <div class="price1 line-through">$15.00</div>
+                <div class="price2 sale">$10.00</div>
+              </div>
+              <div class="cart-product-item d-flex">
+                <div class="img">
+                  <img src="cart-sp1 5.png" alt="cart-image" />
+                  <div class="quantity">1</div>
+                </div>
+                <div class="text">
+                  <h6>Váy lông vũ dài</h6>
+                  <p>Đỏ / S</p>
+                  <div class="icon">
+                    <i
+                      class="fas fa-edit"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    ></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </div>
+
+                <div class="price1 line-through">$15.00</div>
+                <div class="price2 sale">$10.00</div>
+              </div>
+              <div class="cart-product-item d-flex">
+                <div class="img">
+                  <img src="cart-sp1 5.png" alt="cart-image" />
+                  <div class="quantity">1</div>
+                </div>
+                <div class="text">
+                  <h6>Váy lông vũ dài</h6>
+                  <p>Đỏ / S</p>
+                  <div class="icon">
+                    <i
+                      class="fas fa-edit"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    ></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </div>
+
+                <div class="price1 line-through">$15.00</div>
+                <div class="price2 sale">$10.00</div>
+              </div>
+            </div>
+            <div class="cart-footer d-flex justify-content-between mt-5 mb-3">
+              <input
+                type="text"
+                placeholder="Nhập mã giảm giá"
+                class="border-input"
+              />
+              <button class="btn btn-dark">Xác nhận</button>
+            </div>
+            <div class="total d-flex justify-content-between">
+              <p>Tổng Tiền</p>
+              <p>$90.00</p>
+            </div>
+            <div class="total d-flex justify-content-between mt-2 mb-2">
+              <p>Giảm giá</p>
+              <p class="sale">$-30.00</p>
+            </div>
+            <div class="total d-flex justify-content-between mb-3">
+              <p>Còn lại</p>
+              <p>$60.00</p>
+            </div>
+            <a href="#">
+              <button class="btn btn-dark btn-lg w-100 mb-3">Thanh Toán</button>
+            </a>
+            <div class="payment">
+              <div class="payment-item">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Thanh toán an toàn</span>
+              </div>
+              <div class="payment-item mb-2 mt-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Hơn 5.000 cửa hàng văn phòng phẩm</span>
+              </div>
+              <div class="payment-item">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Miễn phí vận chuyển và trả lại</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL SECTION  -->
+      <button
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        <i class="fas fa-trash-alt"></i>
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="text-align: center">
+              <div class="product-header d-flex">
+                <div class="image">
+                  <img src="cart-sp1 1 (1).png" alt="anh1" />
+                </div>
+                <div class="desc ms-3">
+                  <h4>Váy lông vũ dài</h4>
+                  <p style="text-align: left">$15.00</p>
+                </div>
+              </div>
+              <div class="product-body">
+                <div class="color">
+                  <h4>Màu sắc: Đỏ</h4>
+                  <div
+                    class="box-circle d-flex justify-content-center align-items-center"
+                  >
+                    <div class="circle circle-green"></div>
+                    <div class="circle circle-cyan"></div>
+                    <div class="circle circle-pink"></div>
+                  </div>
+                </div>
+                <div class="size">
+                  <h4>Kích cỡ: S</h4>
+                  <div
+                    class="box-circle d-flex justify-content-center align-items-center"
+                  >
+                    <div
+                      class="circle circle-border d-flex justify-content-center align-items-center"
+                    >
+                      S
+                    </div>
+                    <div
+                      class="circle circle-border d-flex justify-content-center align-items-center"
+                    >
+                      M
+                    </div>
+                    <div
+                      class="circle circle-border d-flex justify-content-center align-items-center"
+                    >
+                      L
+                    </div>
+                  </div>
+                </div>
+                <div class="add-or-minus"></div>
+                <button
+                  class="btn btn-dark btn-lg w-100 mb-3"
+                  data-bs-dismiss="modal"
+                >
+                  Xác nhận
+                </button>
+              </div>
+              <div class="footer-modal">
+                <a href="#" class="mb-5">
+                  <span>Xem chi tiết sản phẩm</span>
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MODAL SECTION  -->
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
