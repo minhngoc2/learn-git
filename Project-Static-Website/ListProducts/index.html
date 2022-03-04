@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danh sách sản phẩm</title>
+    <link rel="icon" href="images/favicon.ico">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -24,13 +25,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
     <section id="header">
       <!-- ----------------------------  NAVBAR  -------------------------------------  --  -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Ngoc Minh's Brand</a>
+          <a class="navbar-brand" href="../Homepage/index.html">Ngoc Minh's Brand</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,7 +46,7 @@
           <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Trang Chủ</a>
+                <a class="nav-link" href="../Homepage/index.html">Trang Chủ</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -225,7 +227,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../Cart/index.html">
                   <i class="fas fa-shopping-cart"></i>
                   Cart
                 </a>
@@ -281,11 +283,9 @@
     <!-- ----------------------------  Title & Filter  -------------------------------------  --  -->
     <div class="container mt-5">
       <div class="title">
-        
-        <div display: none;></div>
-
+        <h3 style="visibility: hidden;">HIHI</h3>
         <h2>Váy ngắn tây âu</h2>
-        <button class="sort" id="sort"> <p class="feature"><strong>Đặc điểm</strong></p>
+        <button class="sort" id="sort"> <p class="feature" style="font-size: 1.25rem;"><strong>Đặc điểm</strong></p>
           <i class="fas fa-angle-down down" ></i>
           <div class="menu" id="menu">
             <p class="sub-menu">Bán chạy nhất</p>
@@ -299,69 +299,71 @@
       </div>
     </div>
     
-    <!-- Filter  -->
-    <div class="container">
-      <div class="filter" > 
-        <button id="filter">
-          <i class="fas fa-filter"></i> <strong>Bộ lọc</strong>
-        </button>
-        <div class="row filter-row mt-4" id="row-filter">
-        <div class="col col1">
-          <div class="filter-color">
-            <h4 class="mb-3" style="text-decoration: underline;">Màu sắc</h4>
-            <div class="black d-flex">
-              <div class="circle circle-black"></div>
-              <span>Đen (2)</span>
+            <!-- Filter  -->
+            <div class="container">
+              <div class="filter" > 
+                <button id="filter" class="btn-lg">
+                  <i class="fas fa-filter"></i> <strong>Bộ lọc</strong>
+                </button>
+                <div class="row filter-row mt-4" id="row-filter">
+                <div class="col col1">
+                  <div class="filter-color">
+                    <h4 class="mb-3" style="text-decoration: underline;">Màu sắc</h4>
+                    <div class="black d-flex">
+                      <div class="circle circle-black"></div>
+                      <span>Đen (2)</span>
+                    </div>
+                    <div class="blue d-flex">
+                      <div class="circle circle-blue"></div>
+                      <span>Xanh lam (1)</span>
+                    </div>
+                    <div class="cyan d-flex">
+                      <div class="circle circle-cyan"></div>
+                      <span>Lục lam (2)</span>
+                    </div>
+                    <div class="green d-flex">
+                      <div class="circle circle-green"></div>
+                      <span>Xanh lá (1)</span>
+                    </div>
+                    <div class="pink d-flex">
+                      <div class="circle circle-pink"></div>
+                      <span>Hồng (2)</span>
+                    </div>
+                    <div class="red d-flex">
+                      <div class="circle circle-red"></div>
+                      <span>Đỏ (1)</span>
+                    </div>
+                  </div>
+                  <div class="filter-price">
+                    <h4 class="title-filter-price"style="text-decoration: underline;">Giá Tiền</h4>
+                    <div class="filter-box">
+                      <div class="filter-line"></div>
+                    </div>
+                    <p class="mt-4">Price: <b>$0.00 - $100</b></p>
+                    <button class="btn btn-outline-dark mt-4 btn-lg">Tìm Kiếm</button>
+                  </div>
+                </div>
+                <div class="col col2">
+                 <div class="size">
+                  <h4 style="text-decoration: underline;">Kích cỡ</h4>
+                  <p >XS (1)</p>
+                  <p >S (1)</p>
+                  <p >M (1)</p>
+                  <p >L (1)</p>
+                  <p >XL (1)</p>
+                  <p >XXL (1)</p>
+                 </div>
+                  <h4 class="available"style="text-decoration: underline;">Hàng có sẵn</h4>
+                  <p>Nổi bật (15)</p>
+                  <p>Mới về (10)</p>
+                  <p>Giảm giá (25)</p>
+                </div>
+              </div>
+              </div>
             </div>
-            <div class="blue d-flex">
-              <div class="circle circle-blue"></div>
-              <span>Xanh lam (1)</span>
-            </div>
-            <div class="cyan d-flex">
-              <div class="circle circle-cyan"></div>
-              <span>Lục lam (2)</span>
-            </div>
-            <div class="green d-flex">
-              <div class="circle circle-green"></div>
-              <span>Xanh lá (1)</span>
-            </div>
-            <div class="pink d-flex">
-              <div class="circle circle-pink"></div>
-              <span>Hồng (2)</span>
-            </div>
-            <div class="red d-flex">
-              <div class="circle circle-red"></div>
-              <span>Đỏ (1)</span>
-            </div>
-          </div>
-          <div class="filter-price">
-            <h4 class="title-filter-price"style="text-decoration: underline;">Giá Tiền</h4>
-            <div class="filter-box">
-              <div class="filter-line"></div>
-            </div>
-            <p class="mt-4">Price: <b>$0.00 - $100</b></p>
-            <button class="btn btn-outline-dark mt-4 btn-lg">Tìm Kiếm</button>
-          </div>
-        </div>
-        <div class="col col2">
-         <div class="size">
-          <h4 style="text-decoration: underline;">Kích cỡ</h4>
-          <p >XS (1)</p>
-          <p >S (1)</p>
-          <p >M (1)</p>
-          <p >L (1)</p>
-          <p >XL (1)</p>
-          <p >XXL (1)</p>
-         </div>
-          <h4 class="available"style="text-decoration: underline;">Hàng có sẵn</h4>
-          <p>Nổi bật (15)</p>
-          <p>Mới về (10)</p>
-          <p>Giảm giá (25)</p>
-        </div>
-      </div>
-      </div>
-    </div>
-    <!-- End Filter  -->
+            <!-- End Filter  -->
+            
+        
     
     
     <!-- ----------------------------  End Title & Filter  -------------------------------------  --  -->
@@ -373,11 +375,13 @@
 
         <!-- Row 1  -->
         <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
-              <div class="card-header">
-                <img src="images/product_1 1.png" alt="product1" />
-              </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
+              <a href="../Detail-Product/index.html">
+                <div class="card-header">
+                  <img src="images/image-product.png" alt="product1" />
+                </div>
+              </a>
               <div class="card-body d-flex">
                 <div class="left">
                   <p>Name of Products</p>
@@ -396,8 +400,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_3 1.png" alt="product1" />
               </div>
@@ -419,8 +423,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_2 1.png" alt="product1" />
               </div>
@@ -442,8 +446,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_4 1.png" alt="product1" />
               </div>
@@ -465,11 +469,9 @@
               </div>
             </div>
           </div>
-        </div>
         <!-- Row 2  -->
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_s-new11 1.jpg" alt="product1" />
               </div>
@@ -491,8 +493,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/products_2 2.jpg" alt="product1" />
               </div>
@@ -514,8 +516,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_s-new15 1.jpg" alt="product1" />
               </div>
@@ -537,8 +539,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/products_3 1.jpg" alt="product1" />
               </div>
@@ -560,11 +562,9 @@
               </div>
             </div>
           </div>
-        </div>
         <!-- Row 3  -->
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4  col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/blog4 1.png" alt="product1" />
               </div>
@@ -586,8 +586,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4  col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_s-new2 2.png" alt="product1" />
               </div>
@@ -609,8 +609,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4  col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_s-new10 1.png" alt="product1" />
               </div>
@@ -632,8 +632,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mt-3">
               <div class="card-header">
                 <img src="images/product_s-new9 1.png" alt="product1" />
               </div>
@@ -655,7 +655,6 @@
               </div>
             </div>
           </div>
-        </div>
         <!-- End  -->
 
         <!-- Pagination  -->
@@ -684,26 +683,30 @@
         </nav>
         <!-- End Pagination  -->
 
-            <!-- Sign up newsletters  -->
-            <div class="container">
-              <section id="newsletters" class="mt-5">
-                <div class="sign-up-newsletters">
-                  <div class="container">
-                    <h2 class="sub-title">Đăng ký bản tin</h2>
-                    <p class="desc mt-2 mb-2">Đăng ký bản tin mới dể cập nhật hằng ngày với những thiết kế mới nhất</p>
-                    <div class="form d-flex justify-content-center align-items-center mt-4">
-                      <input type="email" placeholder="Xin hãy nhập email">
-                      <button class="btn btn-dark" type="submit">Đăng Ký</button>
-                    </div>
-                    <div class="logo mt-3">
-                      <i class="press-logo fab fa-facebook fa-2x"></i>
-                      <i class="press-logo fab fa-instagram-square fa-2x"></i>
-                      <i class="press-logo fab fa-youtube fa-2x"></i>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
+       
+
+
+    </section>
+    <section id="newsletters" class="mt-5">
+      <div class="sign-up-newsletters">
+        <div class="container">
+          <h2 class="sub-title">Đăng ký bản tin</h2>
+          <p class="desc mt-2 mb-2">Đăng ký bản tin mới dể cập nhật hằng ngày với những thiết kế mới nhất</p>
+          <div class="form d-flex justify-content-center align-items-center mt-4">
+            <input class="email"type="email" placeholder="Xin hãy nhập email">
+            <button class="btn btn-dark" type="submit">Đăng Ký</button>
+          </div>
+          <div class="logo mt-3">
+            <i class="press-logo fab fa-facebook fa-2x"></i>
+            <i class="press-logo fab fa-instagram-square fa-2x"></i>
+            <i class="press-logo fab fa-youtube fa-2x"></i>
+          </div>
+        </div>
+
+      </div>
+    </section>
+     
+          <div class="container-fluid" style="background: #000">
             <div class="container">
               <section id="footer">
                 <div class="wrapper">
@@ -713,30 +716,27 @@
                     </h3>
                     <!-- <p>Thời trang truyền thống và thời trang hiện đại</p> -->
                     <p>Hotline: 03124578926</p>
-                    <p class="mt-2 mb-2">Email: Minh.itptit@gmail.com</p>
+                    <p>Email: Minh.itptit@gmail.com</p>
                     <p>Địa chỉ: Tầng 2, Tòa Landmark, Phạm Văn Đồng</p>
                   </div>
                   <div class="abount-us">
                       <h3 class="subTitle pt-3 ">Về Chúng Tôi</h3>
                     <p>Giới thiệu</p>
-                    <p class="mt-2 mb-2">Tuyển dụng</p>
+                    <p>Tuyển dụng</p>
                     <p>Blog xu hướng thời trang</p>
                     <!-- <p>Hệ thống cửa hàng</p> -->
                   </div>
                   <div class="support">
                     <h3 class="subTitle pt-3 ">Hỗ Trợ</h3>
                     <p>Chính sách giao hàng</p>
-                    <p class="mt-2 mb-2">Hướng dẫn thanh toán</p>
+                    <p>Hướng dẫn thanh toán</p>
                     <!-- <p>Tra cứu đơn hàng</p> -->
                     <p>Điều khoản bảo hành và sửa chữa</p>
                   </div>
                 </div>
               </section>
             </div>
-
-
-    </section>
-
+          </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

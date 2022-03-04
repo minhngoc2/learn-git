@@ -65,11 +65,12 @@ p {
   background: black;
   cursor: pointer;
 }
-
+.filter {
+  margin-top: -38px;
+}
 .filter-row {
   width: 375px;
   position: relative;
-  display: none;
 }
 .filter-box {
   position: relative;
@@ -116,11 +117,7 @@ p {
   left: 200px;
 }
 /* List Products  */
-.container > .title {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
+
 .title > h2 {
   font-weight: 600;
 }
@@ -179,6 +176,7 @@ p {
 .form > input {
   width: 40%;
   height: 100%;
+  padding-left: 15px;
 }
 .form > button {
   height: 100%;
@@ -212,14 +210,123 @@ p {
   font-weight: 900;
   text-align: center;
 }
-@media (min-width: 992px) {
-  .wrapper p {
-    line-height: 10px;
+
+/* newsletters  */
+#newsletters {
+  background: #c4c4c4;
+}
+.sign-up-newsletters h2 {
+  padding-top: 3%;
+}
+.desc {
+  text-align: center;
+}
+.form {
+  height: 50px;
+}
+.form > input {
+  width: 40%;
+  height: 100%;
+  margin-right: 1%;
+}
+.form > button {
+  height: 100%;
+  width: 30%;
+}
+.logo {
+  text-align: center;
+}
+.press-logo {
+  margin: 1%;
+}
+/* end newsletters  */
+
+/* SECTION FOOTER  */
+#footer {
+  background: #0c0c0c;
+}
+.wrapper {
+  text-align: center;
+  color: white;
+  padding: 0% 2% 1%;
+  width: 100%;
+}
+.wrapper p {
+  line-height: 20px;
+}
+.subTitle {
+  font-weight: 600;
+}
+@media (min-width: 1200px) {
+  .card {
+    margin: 0px;
   }
 }
 @media (min-width: 768px) {
   .wrapper {
     display: flex;
     justify-content: space-between;
+  }
+  .container > .title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.card p {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .row > * {
+    width: auto;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .filter {
+    display: none;
+  }
+  #sort {
+    display: none;
+  }
+  .title > h3 {
+    display: none;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+.filter-row {
+  display: none;
+}
+button {
+  background: #fff;
+}
+.page-item a {
+  color: black;
+}
+.page-item:nth-child(2) a {
+  font-weight: 700;
+}
+@media (max-width: 992px) {
+  .dropdown-menu {
+    background-color: #212529;
+  }
+  .dropdown-menu a {
+    color: white;
+  }
+}
+.dropdown-item:active {
+  background-color: #212529;
+  color: white;
+}
+@media (max-width: 768px) {
+  .email {
+    width: 100% !important;
   }
 }

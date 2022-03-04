@@ -18,3 +18,12 @@ function minus() {
 }
 minus();
 
+function showImage() {
+  $('.small-image').click(function () {
+    let linkImage = $(this).attr("src");
+    $('.big-image').attr("src", linkImage);
+    $('.small-image').removeClass("default-border");
+    $(this).addClass("default-border");
+  })
+}
+showImage();

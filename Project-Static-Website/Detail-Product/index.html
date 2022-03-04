@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi tiết sản phẩm</title>
+    <link rel="icon" href="images/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -30,7 +31,9 @@
       <!-- ----------------------------  NAVBAR  -------------------------------------  --  -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Ngoc Minh's Brand</a>
+          <a class="navbar-brand" href="../Homepage/index.html"
+            >Ngoc Minh's Brand</a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -44,7 +47,7 @@
           <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Trang Chủ</a>
+                <a class="nav-link" href="../Homepage/index.html">Trang Chủ</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -225,7 +228,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../Cart/index.html">
                   <i class="fas fa-shopping-cart"></i>
                   Cart
                 </a>
@@ -249,18 +252,22 @@
               <div class="row">
                 <div class="small-picture col-3">
                   <div class="image">
-                    <img src="../Homepage/images/product_1.jpg" alt="" />
+                    <img
+                      class="small-image default-border"
+                      src="images/image1.jpg"
+                      alt=""
+                    />
                   </div>
                   <div class="image">
-                    <img src="../Homepage/images/product_1.jpg" alt="" />
+                    <img class="small-image" src="images/image2.jpg" alt="" />
                   </div>
                   <div class="image">
-                    <img src="../Homepage/images/product_1.jpg" alt="" />
+                    <img class="small-image" src="images/image3.jpg" alt="" />
                   </div>
                 </div>
                 <div class="big-picture col-9">
                   <div class="image" style="position: relative">
-                    <img src="../Homepage/images/product_1.jpg" alt="" />
+                    <img class="big-image" src="images/image1.jpg" alt="" />
                     <div class="price">-56%</div>
                   </div>
                 </div>
@@ -270,23 +277,16 @@
               class="info-product col-md-5 d-flex flex-column justify-content-between"
             >
               <div class="title">
-                <h3>Váy ngắn</h3>
+                <h3>Áo Vest trong bộ Vest-Quần</h3>
                 <p>
                   <span class="line-through">$45.00</span>
                   <span class="sale">$20.00</span>
                 </p>
               </div>
               <div class="desc">
-                Design inspiration lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci
-                magna rhoncus neque, id pulvinar odio lorem non turpis. Morbi
-                commodo, ipsum sed pharetra gravida, orci magna rhoncus neque
-                rhoncus neque, id pulvinar odio lorem non turpis. Gravida, orci
-                magna rhoncus neque rhoncus neque, id pulvinar odio lorem non
-                turpis commodo, ipsum sed pharetra gravida, orci magna rhoncus
-                neque rhoncus neque, id pulvinar odio lorem non turpis. Gravida,
-                orci magna rhoncus neque rhoncus neque, id pulvinar odio lorem
-                non turpis
+                Blazer chính là mẫu áo vest làm mưa làm gió suốt thời gian qua.
+                Nhờ vào thiết kế thanh lịch, được cách điệu từ áo vest mang hơi
+                hướng hiện đại và thời trang.
               </div>
               <div class="color">
                 <h6>Màu sắc: Đen</h6>
@@ -338,12 +338,14 @@
               </div>
               <div class="Button d-flex">
                 <div class="purchase-now">
-                  <button
-                    class="btn btn-dark w-100"
-                    style="border-radius: 20px"
+                  <a href="../Payment-Step1/index.html"
+                    ><button
+                      class="btn btn-dark w-100"
+                      style="border-radius: 20px"
+                    >
+                      Mua Ngay
+                    </button></a
                   >
-                    Mua Ngay
-                  </button>
                 </div>
                 <div class="add-cart" style="flex: 1">
                   <button
@@ -367,33 +369,31 @@
     </section>
     <section class="description">
       <div class="container">
-        <h2>Đặc điểm nổi bật</h2>
+        <h2 class="special-feature">Đặc điểm nổi bật</h2>
         <p>
-          Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing
-          elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus
-          neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.
-          Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat
-          volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus
-          pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget
-          euismod ullamcorper, lectus nunc ullamcorper orci.
+          Trang phục này càng rất dễ phối đồ và hầu như phù hợp với mọi trang
+          phục. Có lẽ vậy mà em nó vẫn luôn là 1 item "must have" trong tủ quần
+          áo của mỗi chị em. Màu sắc nổi bật cùng với các kiểu dáng vest khác
+          nhau kết hợp với những xu hướng thời trang mang đến cho người dùng cảm
+          giác đơn giản nhưng không thiếu phần sang trọng, quý phái.
         </p>
         <div class="row" style="text-align: center">
           <div class="col-md-4 col-12">
             <img
               style="margin-bottom: 12px"
-              src="images/product_1 1 4.jpg"
+              src="images/mini1.png"
               alt="product1"
             />
           </div>
           <div class="col-md-4 col-12">
             <img
               style="margin-bottom: 12px"
-              src="images/product_1 1 4.jpg"
+              src="images/mini2.png"
               alt="product1"
             />
           </div>
           <div class="col-md-4 col-12">
-            <img src="images/product_1 1 4.jpg" alt="product1" />
+            <img src="images/mini3.png" alt="product1" />
           </div>
         </div>
         <div class="row d-flex mt-5">
@@ -430,7 +430,7 @@
             <div class="image">
               <img
                 style="object-fit: cover; height: 100%"
-                src="../Homepage/images/product_1.jpg"
+                src="images/big1.png"
                 alt=""
               />
             </div>
