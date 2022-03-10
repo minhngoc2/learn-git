@@ -27,3 +27,20 @@ function showImage() {
   })
 }
 showImage();
+
+let productsArray;
+function addProduct() {
+  $(".add-product").click(function () {
+    let quantity = +$("#quantity-number").text();
+    let price = 20;
+    let product = {
+      quantity,
+      price
+    }
+    productsArray = JSON.parse(localStorage.getItem('productArray')) ?? []
+    console.log(productsArray)
+    productsArray.push(product)
+    localStorage.setItem('productArray', JSON.stringify(productsArray))
+  })
+}
+addProduct();

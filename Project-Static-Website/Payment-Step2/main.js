@@ -29,3 +29,53 @@ function purchase() {
   })
 }
 purchase();
+
+function render() {
+  let productArray = JSON.parse(localStorage.getItem('productArray'));
+  if (!productArray) {
+    return;
+  }
+  let itemHTML = "";
+  for (let i = 0; i < productArray.length; i++) {
+    let sum = productArray[i].quantity * 20;
+    itemHTML += `<div class="cart-product-item d-flex">
+    <div class="img">
+      <img src="cart-sp1 5.png" alt="cart-image" />
+      <div class="quantity">${productArray[i].quantity}</div>
+    </div>
+    <div class="text">
+      <h6>Váy lông vũ dài</h6>
+      <p>Đỏ / S</p>
+      <div class="icon">
+        <i
+          class="fas fa-edit"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        ></i>
+        <i class="fas fa-trash-alt"></i>
+      </div>
+    </div>
+
+    <div class="price1 line-through">$45.00</div>
+    <div class="price2 sale">$20.00</div>
+  </div>`
+  }
+  $(".card-product-header")[0].innerHTML = itemHTML;
+}
+
+render();
+
+function Total() {
+  let quantities = $(".quantity");
+  let result = 0;
+  for (let i = 0; i < quantities.length; i++) {
+    result += +quantities[i].innerText * 20;
+  }
+  console.log(result);
+  $(".totalMoney").text('$' + `${result}`);
+  result -= 10;
+  $(".lastTotal").text('$' + `${result}`)
+
+}
+Total();

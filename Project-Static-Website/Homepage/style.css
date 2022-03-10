@@ -80,6 +80,12 @@ a:hover {
 }
 
 /* SECTION BODY  */
+#body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sub-title {
   text-align: center;
   font-weight: 900;
