@@ -360,3 +360,17 @@ form {
   text-align: center;
   margin-top: 25px;
 }
+.btn-confirm {
+  margin-left: 15px;
+}
+
+.Cart-Empty {
+  margin-top: 500px;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+}
+
+.Cart-Empty a {
+  color: #ff0000;
+}

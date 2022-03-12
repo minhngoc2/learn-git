@@ -40,7 +40,7 @@ function render() {
     let sum = productArray[i].quantity * 20;
     itemHTML += `<div class="cart-product-item d-flex">
     <div class="img">
-      <img src="cart-sp1 5.png" alt="cart-image" />
+      <img src="abc3.png" alt="cart-image" />
       <div class="quantity">${productArray[i].quantity}</div>
     </div>
     <div class="text">
@@ -53,7 +53,7 @@ function render() {
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
         ></i>
-        <i class="fas fa-trash-alt"></i>
+        <i class="fas fa-trash-alt trash-icon"></i>
       </div>
     </div>
 
@@ -65,6 +65,7 @@ function render() {
 }
 
 render();
+
 
 function Total() {
   let quantities = $(".quantity");
@@ -79,3 +80,22 @@ function Total() {
 
 }
 Total();
+function check() {
+  if ($(".card-product-header .cart-product-item").length == 0) {
+    $(".banner").empty();
+    $("#header").empty();
+    $("#body").empty();
+    $(".Cart-Empty").css("display", "block");
+  }
+}
+function Delete() {
+  $(".trash-icon").click(function () {
+    $(this).parent().parent().parent().remove();
+    check();
+    let productArray = JSON.parse(localStorage.getItem('productArray'));
+    productArray = productArray.splice(0, productArray.length - 1);
+    localStorage.setItem('productArray', JSON.stringify(productArray));
+    Total();
+  })
+}
+Delete();

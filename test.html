@@ -5,22 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
+    <style>
+      /* ul {
+        display: none;
+      }
+      input:focus ~ ul {
+        display: block;
+      } */
+    </style>
   </head>
   <body>
-    <div class="box">
-      <div class="children">Children</div>
-      <div class="children">Children</div>
-    </div>
-    <script>
-      var listItems1 = document.querySelectorAll(".parent>li");
-      var listItems2 = document.querySelectorAll(".parent>ul>li");
-      var listItems3 = document.querySelectorAll(
-        ".parent > li, .parent > ul > li"
-      );
-
-      console.log(listItems1);
-      console.log(listItems2);
-      console.log(listItems3);
-    </script>
+    <button id="btn">Click me!</button>
+    <script src="main.js"></script>
   </body>
 </html>

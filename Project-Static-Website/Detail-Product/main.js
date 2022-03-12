@@ -29,6 +29,7 @@ function showImage() {
 showImage();
 
 let productsArray;
+let TotalSum = 0;
 function addProduct() {
   $(".add-product").click(function () {
     let quantity = +$("#quantity-number").text();
@@ -41,6 +42,37 @@ function addProduct() {
     console.log(productsArray)
     productsArray.push(product)
     localStorage.setItem('productArray', JSON.stringify(productsArray))
+    TotalSum += quantity;
+    $(".quantity").text(TotalSum);
   })
 }
 addProduct();
+
+function showBorder() {
+  $(".circle-size").click(function () {
+    $(".circle-size").removeClass("circle-border");
+    $(this).addClass("circle-border");
+    let newSize = "Kích cỡ: " + ($(this).text())
+    $(".h6-size").text(newSize);
+  })
+}
+showBorder();
+
+function borderColor() {
+  $(".circle-color").click(function () {
+    $(".circle-color").removeClass("circle-border");
+    $(this).addClass("circle-border");
+    if ($(this).hasClass("circle-cyan")) {
+      $(".h6-color").text("Màu sắc: Lục lam")
+    }
+    else if ($(this).hasClass("circle-black")) {
+      $(".h6-color").text("Màu sắc: Đen")
+    }
+    else if ($(this).hasClass("circle-green")) {
+      $(".h6-color").text("Màu sắc: Xanh lá")
+    }
+
+
+  })
+}
+borderColor();

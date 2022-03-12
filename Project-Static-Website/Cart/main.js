@@ -2,12 +2,12 @@
 function plus() {
   $(".icon-plus").click(function () {
     let defaultValue = +$(this).parent().children(":first").val();
-    console.log(defaultValue);
     defaultValue++;
     $(this).parent().children(":first").val(`${defaultValue}`);
     let sumOfItem = defaultValue * 20;
     $(this).parent().parent().parent().parent().children(":last").children(":first").text('$' + `${sumOfItem}`);
     Total();
+    Cart();
   })
 }
 
@@ -15,7 +15,6 @@ function plus() {
 function minus() {
   $(".icon-minus").click(function () {
     let defaultValue = +$(this).parent().children(":first").val();
-    console.log(defaultValue);
     if (defaultValue == 1) {
       return;
     }
@@ -24,6 +23,7 @@ function minus() {
     let sumOfItem = defaultValue * 20;
     $(this).parent().parent().parent().parent().children(":last").children(":first").text('$' + `${sumOfItem}`);
     Total();
+    Cart();
   })
 }
 
@@ -36,8 +36,8 @@ function Delete() {
     productArray = productArray.splice(0, productArray.length - 1);
     localStorage.setItem('productArray', JSON.stringify(productArray));
     Total();
+    Cart();
   })
-
 }
 
 
@@ -49,17 +49,18 @@ function check() {
   }
 }
 
-function purchase() {
-  $(".Purchase").click(function () {
-    $("h2").remove();
-    $(".container-fluid").remove();
-    $(".footer-cart").remove();
-    $(".back-to-homepage").css("display", "block");
-    $(".Purchase-successful").css("display", "flex");
-    $(".image-purchase-successful").css("display", "block");
+// function purchase() {
+//   $(".Purchase").click(function () {
+//     $("h2").remove();
+//     $(".container-fluid").remove();
+//     $(".footer-cart").remove();
+//     $("table").empty();
+//     $(".back-to-homepage").css("display", "block");
+//     $(".Purchase-successful").css("display", "flex");
+//     $(".image-purchase-successful").css("display", "block");
 
-  })
-}
+//   })
+// }
 
 
 function render() {
@@ -74,7 +75,7 @@ function render() {
     <td>
       <div class="wrapper">
         <div class="image">
-          <img src="images/cart-sp1 1 (2).png" alt="anh1" />
+          <img src="images/abc3.png" alt="anh1" />
         </div>
       </div>
     </td>
@@ -142,3 +143,13 @@ function Total() {
 
 };
 Total();
+
+function Cart() {
+  let arr = $(".quantity1");
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    result += +arr[i].value;
+  }
+  $(".quantity").text(result);
+}
+Cart();
